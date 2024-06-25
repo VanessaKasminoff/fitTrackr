@@ -54,4 +54,75 @@ body {
   letter-spacing: 4.5px;
 }
 
+nav {
+  background-color: rgb(51, 214, 119);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #fcff34;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+  ul {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background-color: rgb(51, 214, 119);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  ul li {
+    margin: 15px 0;
+  }
+  ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
