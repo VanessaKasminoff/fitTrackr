@@ -7,6 +7,9 @@ import LogIn from "./pages/LogIn";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import MealPrep from "./pages/MealPrep";
+import LearnMore from "./pages/LearnMore";
+import Fitness from "./pages/Fitness";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/MealPrep" element={<MealPrep />} />
+        <Route path="/LearnMore" element={<LearnMore />} />
+        <Route path="/Fitness" element={<Fitness />} />
+        <Route path="/Contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
