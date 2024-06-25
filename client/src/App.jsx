@@ -14,9 +14,21 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
-      <h1>Hi! Welcome to fitTrackr!</h1>
-    </>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/NewUser" element={<NewUser />} />
+        <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/MealPrep" element={<MealPrep />} />
+        <Route path="/LearnMore" element={<LearnMore />} />
+        <Route path="/Fitness" element={<Fitness />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+    
   )
 }
 
