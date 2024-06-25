@@ -6,7 +6,7 @@ function App() {
       <header class="header">
         {/* Logo */}
         <div class="logo-box">
-          <img src="#" alt="logo" class="logo" />
+          <img src="src/assets/img/fitTrackrLogo.png" alt="logo" class="logo" />
         </div>
 
         {/* Hero Content */}
