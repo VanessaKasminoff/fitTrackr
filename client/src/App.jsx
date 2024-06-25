@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
 
+      // put anything before the <BrowserRouter> and it will appear in all webpages! so like nav bar or logo is what im thinking of, make sure you wrap everuthing into a div if you are going to! this includes <BrowserRouter>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -28,7 +29,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
-    
+
   )
 }
 
