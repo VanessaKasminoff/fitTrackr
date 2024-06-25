@@ -22,12 +22,11 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 }
 .header .logo-box {
-  position: absolute;
   top: 40px;
   left: 40px;
 }
 .header .logo-box .logo {
-  height: 100px;
+  height: 55px;
 }
 .header .text-box {
   position: absolute;
@@ -53,14 +52,13 @@ body {
   font-weight: 400;
   letter-spacing: 4.5px;
 }
-
 nav {
   background-color: rgb(51, 214, 119);
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 
 ul {
@@ -115,10 +113,10 @@ ul li a:hover {
     transition: all 0.3s;
   }
   ul li {
-    margin: 15px 0;
+    margin: 8px 0;
   }
   ul li a {
-    font-size: 20px;
+    font-size: 15px;
   }
   #check:checked ~ ul {
     right: 0;

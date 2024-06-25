@@ -4,7 +4,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 20px;
 }
 
 ul {
@@ -46,6 +46,7 @@ ul li a:hover {
         margin-right: 20px;
     }
 
+
     ul {
         position: fixed;
         top: 70px;
@@ -61,11 +62,11 @@ ul li a:hover {
     }
 
     ul li {
-        margin: 15px 0;
+        margin: 8px 0;
     }
 
     ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     #check:checked ~ ul {
