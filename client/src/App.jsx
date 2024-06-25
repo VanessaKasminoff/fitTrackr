@@ -3,7 +3,6 @@ import './assets/css/style.css'
 function App() {
   return (
     <>
-    <h1>HeLP</h1>
       <header class="header">
         {/* Logo */}
         <div class="logo-box">
@@ -13,8 +12,8 @@ function App() {
         {/* Hero Content */}
         <div class="text-box">
           <h1 class="heading-primary">
-            <span></span>
-            <span></span>
+            <span>FitTrackr</span>
+            <span>Empower your fitness journey</span>
           </h1>
         </div>
 
