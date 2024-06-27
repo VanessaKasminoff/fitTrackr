@@ -122,5 +122,15 @@ ul li a:hover {
     right: 0;
   }
 }
+#cardcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid red;
+  display: flex;
+}
 
 /*# sourceMappingURL=style.css.map */

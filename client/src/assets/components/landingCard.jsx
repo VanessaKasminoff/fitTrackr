@@ -1,15 +1,21 @@
 import React from 'react';
+import landingPageCard from '../scss/_landingPageCard.scss';
 
 const cardData = [
-    { title: 'card 1', content: 'Content for card 1' },
-    { title: 'card 2', content: 'Content for card 2' },
-    { title: 'card 3', content: 'Content for card 3' }
+    { title: 'card 1', content: 'Content for card 1', imageUrl: '' },
+    { title: 'card 2', content: 'Content for card 2', imageUrl: '' },
+    { title: 'card 3', content: 'Content for card 3', imageUrl: '' }
 ];
 
 const Card = ({ title, content }) => (
     <div className="card">
-        <h2>{title}</h2>
-        <p>{content}</p>
+        <div className='card-text'>
+            <h2 className='card-title'>{title}</h2>
+            <p className='card-content'>{content}</p>
+        </div>
+        <div className='card-image'>
+            <img src={imageUrl} alt={title} />
+        </div>
     </div>
 );
 
