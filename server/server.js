@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
     res.json('Welcome to the backend server!')
 });
 
+//CONTROLLERS
+app.use('/api/users', require('./controllers/users'))
+
 // SERVES CLIENT SIDE REACT ROUTING
 app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'dist', 'index.html')));
 
