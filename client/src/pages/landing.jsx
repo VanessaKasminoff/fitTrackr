@@ -40,6 +40,6 @@ function Landing() {
       </main>
     </div>
   );
-}
+};
 
 export default Landing;

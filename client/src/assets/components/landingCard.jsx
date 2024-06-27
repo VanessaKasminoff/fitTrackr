@@ -1,12 +1,13 @@
 import React from 'react';
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="./style.css" />
 
 import chartImage from '../img/kickboxing.jpg';
 import appleWatchImage from '../img/appleWatch.png';
 import graphImage from '../img/graph.png';
+import gifPhone from '../img/fitTrackr.gif';
 
 const cardData = [
-    { title: 'card 1', content: 'Content for card 1', imageUrl: chartImage },
+    { title: 'card 1', content: 'Content for card 1', imageUrl: gifPhone },
     { title: 'card 2', content: 'Content for card 2', imageUrl: appleWatchImage },
     { title: 'card 3', content: 'Content for card 3', imageUrl: graphImage }
 ];
