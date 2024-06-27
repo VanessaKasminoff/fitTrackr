@@ -5,18 +5,37 @@
 }
 
 .card {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+
+    &.card-0 {
+        background: linear-gradient(to right, rgba(214, 230, 207), transparent);
+        background-size: 200% 100%;
+        animation: slideBackground 4.43s ease-in-out 0.2s infinite;
+
+    }
+    &.card-1 {
+        background-color: #c7c7c7;
+    }
+    &.card-2 {
+        background-color: #303340;
+        color: #fff;
+    }
+    &.card-3 {
+        background-color: #028091;
+        color: #fff;
+    }
+
 }
 
 .card-text {
     flex: 1;
     margin-right: 20px;
+
 }
 
 .card-title{
@@ -31,14 +50,23 @@
 
 .card-image {
     justify-content: flex-end;
-    // width: 50%;
-    border: 1px solid red;
+
 }
 
 .card-image img {
     max-width: 300px;
     height: 300px;
     display: block;
-    border: 1px solid purple;
 
+}
+
+@keyframes slideBackground{
+    0% {
+       
+       background-color: 0 0;
+    }
+
+    100%{
+        background-position: 200% 0;
+    }
 }
