@@ -1,0 +1,44 @@
+#cardcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.card-title{
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+.card-content{
+    font-size: 1em;
+    margin: 0;
+}
+
+.card-image {
+    justify-content: flex-end;
+    width: 50%;
+    border: 1px solid red;
+}
+
+.card-image img {
+    max-width: 300px;
+    height: 300px;
+    display: block;
+    border: 1px solid purple;
+
+}
