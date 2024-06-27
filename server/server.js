@@ -1,10 +1,10 @@
 // DEPENDENCIES
-import express from 'express'
-import path from 'path'
+const express = require('express')
+const path = require('path')
 const app = express()
 
 // ENVIRONMENT VARIABLES
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config()
 const PORT = process.env.PORT
 
