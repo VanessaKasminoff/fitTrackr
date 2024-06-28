@@ -52,6 +52,23 @@ body {
   font-weight: 400;
   letter-spacing: 4.5px;
 }
+@media (max-width: 768px) {
+  .header .text-box .heading-primary .heading-primary-main {
+    font-size: 2.5rem;
+  }
+  .header .text-box .heading-primary .heading-primary-sub {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .header .text-box .heading-primary .heading-primary-main {
+    font-size: 1.3rem;
+  }
+  .header .text-box .heading-primary .heading-primary-sub {
+    font-size: 1rem;
+  }
+}
+
 nav {
   background-color: rgb(51, 214, 119);
   color: #fff;
