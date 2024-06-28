@@ -33,9 +33,6 @@ function Landing() {
         </div>
       </header>
       <main className="main-content">
-        <section className="">
-          
-        </section>
         <CardContainer />
         {/* Add your other sections here */}
       </main>
