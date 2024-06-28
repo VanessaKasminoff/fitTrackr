@@ -24,9 +24,12 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-section social">
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a href="#"><i className="fab fa-instagram"></i></a>
-                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                    <h3>Follow Us</h3>
+                    <div className="social-icons">
+                        <a href="#"><i className="fab fa-facebook-f"></i></a>
+                        <a href="#"><i className="fab fa-instagram"></i></a>
+                        <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="footer-bottom">
