@@ -142,6 +142,7 @@ ul li a:hover {
 .card.card-1 {
   background-color: #303340;
   color: #fff;
+  flex-direction: row-reverse;
 }
 .card.card-2 {
   background-color: #028091;
