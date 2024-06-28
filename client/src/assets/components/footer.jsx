@@ -1,5 +1,5 @@
 import React from "react";
-import './footer.scss';
+import '../scss/_footer.scss'
 
 const Footer = () => {
     return (
@@ -24,9 +24,16 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-section social">
-                    
+                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                    <a href="#"><i className="fab fa-instagram"></i></a>
+                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            <div className="footer-bottom">
+                &copy; 2024 FitTrackr. All rights reserved.
             </div>
         </footer>
     )
 }
+
+export default Footer;
