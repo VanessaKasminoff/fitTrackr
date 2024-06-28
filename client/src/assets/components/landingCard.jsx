@@ -1,8 +1,8 @@
 import React from 'react';
 <link rel="stylesheet" href="./style.css" />
 
-import appleWatchImage from '../img/appleWatch.png';
-import graphImage from '../img/graph.png';
+import appleWatchImage from '../img/appleWatchTransparent.png';
+import graphImage from '../img/graphTransparent.png';
 import workoutBoy from '../img/workoutBoy.gif';
 
 const cardData = [

@@ -156,10 +156,10 @@ ul li a:hover {
   box-sizing: border-box;
 }
 .card.card-0 {
-  background-color: #c7c7c7;
+  background-color: rgba(121, 248, 125, 0.5294117647);
 }
 .card.card-1 {
-  background-color: #303340;
+  background-color: rgba(113, 113, 104, 0.6823529412);
   color: #fff;
   flex-direction: row-reverse;
 }
@@ -171,11 +171,13 @@ ul li a:hover {
 .card-text {
   flex: 1;
   margin-right: 20px;
+  padding-left: 20px;
 }
 
 .card-title {
   font-size: 2em;
   margin: 0 0 10px 0;
+  text-transform: uppercase;
 }
 
 .card-content {

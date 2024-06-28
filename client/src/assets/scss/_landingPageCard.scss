@@ -14,10 +14,10 @@
 
     
     &.card-0 {
-        background-color: #c7c7c7;
+        background-color: #79f87d87;
     }
     &.card-1 {
-        background-color: #303340;
+        background-color: #717168ae;
         color: #fff;
         flex-direction: row-reverse;
     }
@@ -31,12 +31,13 @@
 .card-text {
     flex: 1;
     margin-right: 20px;
-
+    padding-left: 20px;
 }
 
 .card-title{
     font-size: 2em;
     margin: 0 0 10px 0;
+    text-transform: uppercase;
 }
 
 .card-content{
