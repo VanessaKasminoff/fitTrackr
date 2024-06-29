@@ -525,4 +525,55 @@ body {
   background-color: #86f35b;
 }
 
+.dashboard-card {
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.dashboard-card h2 {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+.dashboard-card p {
+  margin: 0;
+  font-size: 1em;
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-page .home-header {
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+}
+.home-page .home-header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+.home-page .home-main {
+  padding: 2em;
+  display: flex;
+  gap: 2em;
+}
+.home-page .home-main .main-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.home-page .home-main .diet-cards {
+  flex: 2;
+  display: flex;
+  gap: 1em;
+}
+.home-page .home-main .diet-cards .dashboard-card {
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+.home-page {
+    .home-header {
+        background-color: rgb(40, 40, 40);
+        color: #fff;
+        padding: 2em;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+    }
+
+    .home-main {
+        padding: 2em;
+        display: flex;
+        gap: 2em;
+
+        .main-card {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .diet-cards {
+            flex: 2;
+            display: flex;
+            gap: 1em;
+
+            .dashboard-card {
+                width: 100%;
+            }
+        }
+    }
+}
