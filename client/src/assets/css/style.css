@@ -150,10 +150,10 @@ nav #check {
   box-sizing: border-box;
 }
 .card.card-0 {
-  background-color: rgba(121, 248, 125, 0.5294117647);
+  background-color: #ffeb3b;
 }
 .card.card-1 {
-  background-color: rgba(113, 113, 104, 0.6823529412);
+  background-color: rgb(51, 214, 119);
   color: #fff;
   flex-direction: row-reverse;
 }
