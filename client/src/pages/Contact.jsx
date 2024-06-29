@@ -1,5 +1,7 @@
 import React from "react";
-import ContactCard from "../assets/components/ContactCard";
+import ContactCard from "../assets/components/ContactCard2";
+import ContactForm from "../assets/components/ContactForm";
+import Footer from "../assets/components/footer";
 
 function Contact() {
   return (
@@ -15,7 +17,12 @@ function Contact() {
           </div>
         </div>
       </header>
-      <main className="contact-main"></main>
+      <main className="contact-main">
+        <ContactForm />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

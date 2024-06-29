@@ -36,6 +36,15 @@
             gap: 10px;
             // border: 1px solid blue;
 
+
+            @media (max-width: 768px) {
+
+            }
+
+            @media (max-width: 480px) {
+
+            }
+
             li {
                 margin: 10px 0;
                 // border: 1px solid greenyellow;
@@ -85,15 +94,6 @@
         }
     }
 
-    .footer-section.links ul {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-section.links ul {
-        grid-template-columns: 1fr;
-    }
 }
 
 

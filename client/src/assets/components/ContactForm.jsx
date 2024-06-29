@@ -54,6 +54,7 @@ const ContactForm = () => {
                 required
                 />
             </div>
+            <button type="submit">Submit</button>
         </form>
     )
 }
