@@ -1,7 +1,8 @@
 import {React, useState} from 'react';
 // import { Link } from 'react-router-dom';
 
-import FormContainerLogin from './component/FormContainerLogin';
+import FormContainerLogin from '../assets/components/FormContainerLogin'
+import TogglePanel from '../assets/components/TogglePanel'
 
 const LogIn = () => {
   const [isActive, setIsActive] = useState(false);

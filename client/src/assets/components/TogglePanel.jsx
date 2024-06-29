@@ -1,16 +1,26 @@
-// import React from "react";
-// // import'../scss/_togglePanel.scss';
+import React from "react";
+// import "./TogglePanel.css"; // Assuming you have a separate CSS file
 
-// const TogglePanel = ({ type, onClick }) => {
-//     const isLeft = type === 'left';
-    
-//     return (
-//       <div className={`toggle-panel toggle-${type}`} onClick={onClick}>
-//         <h1>{isLeft ? 'Welcome Back!' : 'Hello, Friend!'}</h1>
-//         <p>{isLeft ? 'Enter your personal details to use all of site features' : 'Register with your personal details to use all of site features'}</p>
-//         <button className="hidden">{isLeft ? 'Sign In' : 'Sign Up'}</button>
-//       </div>
-//     );
-//   };
-  
-//   export default TogglePanel;
+const TogglePanel = ({ type, onClick }) => {
+  let headerText, paragraphText, buttonText;
+
+  if (type === 'left') {
+    headerText = 'Welcome Back!';
+    paragraphText = 'Enter your personal details to use all of site features';
+    buttonText = 'Sign In';
+  } else {
+    headerText = 'Hello, Friend!';
+    paragraphText = 'Register with your personal details to use all of site features';
+    buttonText = 'Sign Up';
+  }
+
+  return (
+    <div className={`toggle-panel toggle-${type}`} onClick={onClick}>
+      <h1>{headerText}</h1>
+      <p>{paragraphText}</p>
+      <button className="hidden">{buttonText}</button>
+    </div>
+  );
+};
+
+export default TogglePanel;
