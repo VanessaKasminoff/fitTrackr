@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -254,7 +255,7 @@ body {
   width: 50%;
   z-index: 2;
 }
-.container.active .container .sign-in {
+.container.active .sign-in {
   transform: translateX(100%);
 }
 .container .sign-up {
@@ -263,7 +264,7 @@ body {
   opacity: 0;
   z-index: 1;
 }
-.container.active .container .sign-up {
+.container.active .sign-up {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -303,7 +304,7 @@ body {
   border-radius: 150px 0 0 100px;
   z-index: 1000;
 }
-.container.active .container .toggle-container {
+.container .toggle-container.active {
   transform: translateX(-100%);
   border-radius: 0 150px 100px 0;
 }
@@ -319,7 +320,7 @@ body {
   transform: translateX(0);
   transition: all 0.6s ease-in-out;
 }
-.container.active .container .toggle {
+.container .toggle.active {
   transform: translateX(50%);
 }
 .container .toggle .toggle-panel {
@@ -339,14 +340,14 @@ body {
 .container .toggle .toggle-panel.toggle-left {
   transform: translateX(-200%);
 }
-.container.active .container .toggle .toggle-panel.toggle-left {
+.container .toggle .toggle-panel.toggle-left.active {
   transform: translateX(0);
 }
 .container .toggle .toggle-panel.toggle-right {
   right: 0;
   transform: translateX(0);
 }
-.container.active .container .toggle .toggle-panel.toggle-right {
+.container .toggle .toggle-panel.toggle-right.active {
   transform: translateX(200%);
 }
 
