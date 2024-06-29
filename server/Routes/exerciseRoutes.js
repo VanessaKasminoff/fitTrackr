@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// import { WorkoutExercise } from "../models/workoutexercise.js";
-// const { workout } = require("../models/workout");
 const db = require("../models");
 const { where } = require("sequelize");
 const { workout } = db;
@@ -22,14 +20,5 @@ router.get("/", async (req, res) => {
       .json({ message: "Failed to fetch exercises", error: error.message });
   }
 });
-
-// router.get("/", async (req, res) => {
-//   try {
-//     const exercises = await WorkoutExercise.findAll();
-//     res.json(exercises);
-//   } catch (error) {
-//     res.status(500).send(error.toString());
-//   }
-// });
 
 module.exports = router;

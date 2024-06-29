@@ -1,20 +1,24 @@
 // DEPENDENCIES
-// import express from "express";
-// import path from "path";
+
 const express = require("express");
 const path = require("path");
 const app = express();
 
 // ENVIRONMENT VARIABLES
-// import dotenv from "dotenv";
 const dotenv = require("dotenv");
 dotenv.config();
 const PORT = process.env.PORT;
 
 // MIDDLEWARE
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(express.urlencoded({ extended: false }));
 // app.use(express.static(path.join("dist")));
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//   })
+// );
 
 const exerciseRoutes = require("./Routes/exerciseRoutes");
 
@@ -24,12 +28,12 @@ app.get("/", (req, res) => {
 });
 
 // API route
-app.use("/exercises", exerciseRoutes);
+app.use("/api/exercises", exerciseRoutes);
 
 // SERVES CLIENT SIDE REACT ROUTING
-// app.get("*", (req, res) =>
-//   res.sendFile(path.resolve(__dirname, "dist", "index.html"))
-// );
+app.get("*", (req, res) => {
+  res.sendFile("dist/index.html", { root: _dirname });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
