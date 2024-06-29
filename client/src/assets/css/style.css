@@ -449,5 +449,42 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.contact-page .contact-header .hero-image {
+  background-image: url(../img/treadmill.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-page .contact-header .hero-image .hero-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-page .contact-header .hero-image .hero-overlay .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactCard {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 200px;
+}
+.contactCard h3 {
+  margin: 0 0 10px 0;
+}
+.contactCard p {
+  margin: 0;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,12 +1,13 @@
 import React from "react";
+import "../scss/_contactCard.scss"
 
-const contactCard = ({ title, content}) => {
+const ContactCard = ({ title, content }) => {
     return (
         <div className="contactCard">
             <h3>{title}</h3>
             <p>{content}</p>
         </div>
-    )
+    );
 }
 
-export default contactCard
+export default ContactCard;
