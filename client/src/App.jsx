@@ -1,5 +1,6 @@
 import './assets/css/style.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CurrentUserProvider from './contexts/CurrentUser'
 
 import Landing from "./pages/landing";
 import NewUser from "./pages/NewUser";
@@ -16,6 +17,7 @@ function App() {
   return (
 
       // put anything before the <BrowserRouter> and it will appear in all webpages! so like nav bar or logo is what im thinking of, make sure you wrap everuthing into a div if you are going to! this includes <BrowserRouter>
+    <CurrentUserProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -29,6 +31,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
+    </CurrentUserProvider>
 
   )
 }
