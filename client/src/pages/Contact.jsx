@@ -15,6 +15,7 @@ function Contact() {
           </div>
         </div>
       </header>
+      <main className="contact-main"></main>
     </div>
   );
 }
