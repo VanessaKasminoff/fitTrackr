@@ -1,44 +1,44 @@
-import React from 'react';
-import SocialIcons from './SocialIcons';
+// import React from 'react';
+// import SocialIcons from './SocialIcons';
 
-const FormContainerLogin = ({ type }) => {
-  let title, emailText, firstNameInput, lastNameInput, passwordText, forgotPasswordLink, buttonText;
+// const FormContainerLogin = ({ type }) => {
+//   let title, emailText, firstNameInput, lastNameInput, passwordText, forgotPasswordLink, buttonText;
 
-  if (type === 'sign-up') {
-    title = 'Create Account';
-    emailText = 'or use your email for registration';
-    firstNameInput = <input type="text" placeholder="First Name" />;
-    lastNameInput = <input type="text" placeholder="Last Name" />;
-    passwordText = 'Password';
-    buttonText = 'Sign Up';
-  } else {
-    title = 'Sign In';
-    emailText = 'or use your email password';
-    firstNameInput = null;
-    lastNameInput = null;
-    passwordText = 'Password';
-    forgotPasswordLink = <a href="#">Forget Your Password?</a>;
-    buttonText = 'Sign In';
-  }
+//   if (type === 'sign-up') {
+//     title = 'Create Account';
+//     emailText = 'or use your email for registration';
+//     firstNameInput = <input type="text" placeholder="First Name" />;
+//     lastNameInput = <input type="text" placeholder="Last Name" />;
+//     passwordText = 'Password';
+//     buttonText = 'Sign Up';
+//   } else {
+//     title = 'Sign In';
+//     emailText = 'or use your email password';
+//     firstNameInput = null;
+//     lastNameInput = null;
+//     passwordText = 'Password';
+//     forgotPasswordLink = <a href="#">Forget Your Password?</a>;
+//     buttonText = 'Sign In';
+//   }
 
-  return (
-    <div className={`form-container ${type}`}>
-      <form>
-        <h1>{title}</h1>
-        <SocialIcons />
-        <span>{emailText}</span>
-        {firstNameInput}
-        {lastNameInput}
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder={passwordText} />
-        {forgotPasswordLink}
-        <button>{buttonText}</button>
-      </form>
-    </div>
-  );
-};
+//   return (
+//     <div className={`form-container ${type}`}>
+//       <form>
+//         <h1>{title}</h1>
+//         <SocialIcons />
+//         <span>{emailText}</span>
+//         {firstNameInput}
+//         {lastNameInput}
+//         <input type="email" placeholder="Email" />
+//         <input type="password" placeholder={passwordText} />
+//         {forgotPasswordLink}
+//         <button>{buttonText}</button>
+//       </form>
+//     </div>
+//   );
+// };
 
-export default FormContainerLogin;
+// export default FormContainerLogin;
 
 
 
