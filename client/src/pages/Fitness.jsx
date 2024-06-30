@@ -46,7 +46,7 @@ function Fitness() {
             <strong>Difficulty:</strong> {workout.difficulty_level}
           </p>
           <p>
-            <strong>Reps:</strong> {workout.reps}
+            <strong>Get them Reps:</strong> {workout.reps}
           </p>
           <p>
             <strong>Time Limit:</strong> {workout.time_limit}
