@@ -21,7 +21,7 @@ function Landing() {
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="/LogIn">Login</a></li>
           </ul>
         </nav>
         {/* Hero Content */}
@@ -39,6 +39,6 @@ function Landing() {
       <Footer />
     </div>
   );
-};
+}
 
 export default Landing;
