@@ -1,0 +1,100 @@
+.home-page {
+    background-color: #232323;
+    .home-header {
+        background-color: rgb(40, 40, 40);
+        color: #fff;
+        padding: 2em;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+    }
+
+    .home-main {
+        padding: 2em;
+        display: flex;
+        gap: 2em;
+
+        .main-card {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .diet-cards {
+            flex: 2;
+            display: flex;
+            gap: 1em;
+
+            .dashboard-card {
+                width: 100%;
+            }
+        }
+    }
+
+    .additional-content {
+        display: flex;
+        align-items: center;
+        padding: 2em;
+        gap: 2em;
+
+        .circular-graph-card {
+            width: 300px;
+            height: 300px;
+        }
+
+        .coaching-info {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .home-header {
+            flex-direction: column;
+        }
+
+        .diet-cards {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .additional-content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .home-header {
+            padding: 1em;
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        .home-main {
+            padding: 1em;
+        }
+
+        .diet-cards {
+            .dashboard-card {
+                min-width: 100%;
+            }
+        }
+
+        .additional-content {
+            .circular-graph-card {
+                width: 250px;
+                height: 250px;
+            }
+
+            .coaching-info {
+                max-width: 100%;
+            }
+        }
+    }
+}

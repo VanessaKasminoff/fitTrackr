@@ -52,6 +52,23 @@ body {
   font-weight: 400;
   letter-spacing: 4.5px;
 }
+@media (max-width: 768px) {
+  .header .text-box .heading-primary .heading-primary-main {
+    font-size: 2.5rem;
+  }
+  .header .text-box .heading-primary .heading-primary-sub {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .header .text-box .heading-primary .heading-primary-main {
+    font-size: 1.3rem;
+  }
+  .header .text-box .heading-primary .heading-primary-sub {
+    font-size: 1rem;
+  }
+}
+
 nav {
   background-color: rgb(51, 214, 119);
   color: #fff;
@@ -60,48 +77,41 @@ nav {
   align-items: center;
   padding: 8px 20px;
 }
-
-ul {
+nav ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-ul li {
+nav ul li {
   margin-right: 20px;
 }
-
-ul li a {
+nav ul li a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
-
-ul li a:hover {
+nav ul li a:hover {
   color: #fcff34;
 }
-
-.checkbtn {
+nav .checkbtn {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
   display: none;
 }
-
-#check {
+nav #check {
   display: none;
 }
-
 @media (max-width: 768px) {
-  .checkbtn {
+  nav .checkbtn {
     display: block;
     order: 1;
     margin-right: 20px;
   }
-  ul {
-    position: fixed;
-    top: 70px;
+  nav ul {
+    position: absolute;
+    top: 100%;
     right: -100%;
     background-color: rgb(51, 214, 119);
     width: 100%;
@@ -111,17 +121,20 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
+    transform: translateY(-100%);
+    z-index: -1;
   }
-  ul li {
+  nav ul li {
     margin: 8px 0;
   }
-  ul li a {
+  nav ul li a {
     font-size: 15px;
   }
-  #check:checked ~ ul {
+  nav #check:checked ~ ul {
     right: 0;
   }
 }
+
 #cardcontainer {
   display: flex;
   flex-direction: column;
@@ -129,7 +142,6 @@ ul li a:hover {
 }
 
 .card {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,15 +149,29 @@ ul li a:hover {
   width: 100%;
   box-sizing: border-box;
 }
+.card.card-0 {
+  background-color: #ffeb3b;
+}
+.card.card-1 {
+  background-color: rgb(51, 214, 119);
+  color: #fff;
+  flex-direction: row-reverse;
+}
+.card.card-2 {
+  background-color: #028091;
+  color: #fff;
+}
 
 .card-text {
   flex: 1;
   margin-right: 20px;
+  padding-left: 20px;
 }
 
 .card-title {
   font-size: 2em;
   margin: 0 0 10px 0;
+  text-transform: uppercase;
 }
 
 .card-content {
@@ -155,16 +181,22 @@ ul li a:hover {
 
 .card-image {
   justify-content: flex-end;
-  border: 1px solid red;
 }
 
 .card-image img {
   max-width: 300px;
   height: 300px;
   display: block;
-  border: 1px solid purple;
 }
 
+@keyframes slideBackground {
+  0% {
+    background-color: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -331,6 +363,365 @@ body {
   50%, 100% {
     opacity: 1;
     z-index: 5;
+  }
+}
+.footer {
+  background-color: #282c34;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.footer .footer-content .footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+.footer .footer-content h3 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.footer .footer-content p {
+  margin: 10px 0;
+}
+.footer .footer-content ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.footer .footer-content ul li {
+  margin: 10px 0;
+}
+.footer .footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-content ul li a:hover {
+  text-decoration: underline;
+}
+.footer .footer-content .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.footer .footer-content .social-icons a {
+  color: #fff;
+  font-size: 20px;
+}
+.footer .footer-content .social-icons a:hover {
+  color: #61dafb;
+}
+.footer .footer-bottom {
+  border-top: 1px solid #fff;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-content .footer-section {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.contact-page .contact-header .hero-image {
+  background-image: url(../img/treadmill.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-page .contact-header .hero-image .hero-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-page .contact-header .hero-image .hero-overlay .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-page .contact-main {
+  padding: 3em 1em;
+  background-color: #ffeb3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactCard {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 200px;
+}
+.contactCard h3 {
+  margin: 0 0 10px 0;
+}
+.contactCard p {
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3em;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.contact-form .form-group {
+  margin-bottom: 1em;
+}
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  border: 1px solid #86f35b;
+  font-size: 1.1em;
+}
+.contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-form button {
+  padding: 1em 2em;
+  color: #fff;
+  background-color: #65d41f;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.contact-form button.hover {
+  background-color: #86f35b;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.dashboard-card h2 {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+.dashboard-card p {
+  margin: 0;
+  font-size: 1em;
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.circular-graph-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: auto;
+}
+.circular-graph-card .circular-graph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circular-graph-card .circular-graph .circle,
+.circular-graph-card .circular-graph .circle-fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid #ddd;
+  z-index: 1;
+}
+.circular-graph-card .circular-graph .circle {
+  border-color: #ddd;
+  z-index: 1;
+}
+.circular-graph-card .circular-graph .circle-fill {
+  border-color: #24ff3a;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%);
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+.circular-graph-card .circular-graph .circle-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.2em;
+  z-index: 3;
+}
+.circular-graph-card .circular-graph .circle-content .percentage {
+  font-size: 2em;
+  font-weight: bold;
+}
+.circular-graph-card .circular-graph .circle-content .label {
+  font-size: 1em;
+  color: #777;
+}
+
+.coaching-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 2em 0;
+}
+.coaching-card .coaching-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.coaching-card .coaching-content {
+  padding: 1em;
+  text-align: center;
+}
+.coaching-card .coaching-content h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.coaching-card .coaching-content p {
+  margin: 1em 0;
+  color: #555;
+}
+
+.home-page {
+  background-color: #232323;
+}
+.home-page .home-header {
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+}
+.home-page .home-header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+.home-page .home-main {
+  padding: 2em;
+  display: flex;
+  gap: 2em;
+}
+.home-page .home-main .main-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.home-page .home-main .diet-cards {
+  flex: 2;
+  display: flex;
+  gap: 1em;
+}
+.home-page .home-main .diet-cards .dashboard-card {
+  width: 100%;
+}
+.home-page .additional-content {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
+}
+.home-page .additional-content .circular-graph-card {
+  width: 300px;
+  height: 300px;
+}
+.home-page .additional-content .coaching-info {
+  width: 100%;
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .home-page .home-header {
+    flex-direction: column;
+  }
+  .home-page .diet-cards {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .home-page .additional-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .home-page .home-header {
+    padding: 1em;
+  }
+  .home-page .home-header h1 {
+    font-size: 2em;
+  }
+  .home-page .home-main {
+    padding: 1em;
+  }
+  .home-page .diet-cards .dashboard-card {
+    min-width: 100%;
+  }
+  .home-page .additional-content .circular-graph-card {
+    width: 250px;
+    height: 250px;
+  }
+  .home-page .additional-content .coaching-info {
+    max-width: 100%;
   }
 }
 
