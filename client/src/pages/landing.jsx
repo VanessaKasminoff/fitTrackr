@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import CardContainer from '../assets/components/landingCard'; 
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
@@ -40,6 +38,6 @@ function Landing() {
       </main>
     </div>
   );
-};
+}
 
 export default Landing;

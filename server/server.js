@@ -14,13 +14,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static('dist'));
 app.use(defineCurrentUser);
+const exerciseRoutes = require("./Routes/exerciseRoutes");
 
 // ROOT
-app.get('/', (req, res) => {
-    res.json('Welcome to the backend server!')
+app.get("/", (req, res) => {
+  res.json("Welcome to the backend server!");
 });
 
 //CONTROLLERS
+app.use("/api/exercises", exerciseRoutes);
 app.use('/api/users', require('./controllers/users'));
 app.use('/api/authentication', require('./controllers/authentication'));
 
@@ -30,5 +32,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
+  console.log(`Server is running on port ${PORT}`);
+});
