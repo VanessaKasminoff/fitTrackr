@@ -5,23 +5,23 @@ import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
-    <div className="container">
-      <div className="form-container sign-in">
-        <form>
-          <h1>Sign In</h1>
-          <div className="social-icons">
-            <a href="#" className="icon"><i className="fa-brands fa-google"></i></a>
-            <a href="#" className="icon"><i className="fa-brands fa-apple"></i></a>
-            <a href="#" className="icon"><i className="fa-brands fa-facebook"></i></a>
-          </div>
-          <span>or use your email for login</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#">Forget Your Password?</a>
-          
-          <button type="button">Sign In</button>
-          
-        </form>
+    <div className="bgcontainer">
+      <div className="container">
+        <div className="form-container sign-in">
+          <form>
+            <h1>Sign In</h1>
+            <div className="social-icons">
+              <a href="#" className="icon"><i className="fa-brands fa-google"></i></a>
+              <a href="#" className="icon"><i className="fa-brands fa-apple"></i></a>
+              <a href="#" className="icon"><i className="fa-brands fa-facebook"></i></a>
+            </div>
+            <span>or use your email for login</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forget Your Password?</a>
+            <Link to="/Home"><button type="button">Sign In</button></Link>
+          </form>
+        </div>
       </div>
     </div>
   );

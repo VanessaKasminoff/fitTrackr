@@ -15,7 +15,7 @@ function Landing() {
           <label className="logo-box">
             <img src="src/assets/img/logo.png" alt="logo" className="logo" />
           </label>
-          <ul>
+          <ul className='nav-content'>
             <li><a className="active" href="#"></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
