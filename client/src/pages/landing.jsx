@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardContainer from '../assets/components/landingCard'; 
+import Footer from '../assets/components/footer';
 
 function Landing() {
   return (
@@ -32,12 +33,10 @@ function Landing() {
         </div>
       </header>
       <main className="main-content">
-        <section className="">
-          
-        </section>
         <CardContainer />
         {/* Add your other sections here */}
       </main>
+      <Footer />
     </div>
   );
 };
