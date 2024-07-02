@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import DashboardCard from "../assets/components/DashboardCard";
 import '../assets/scss/_dashboardCard.scss';
+import DashboardCircularGraphCard from "../assets/components/DashboardCircularGraphCard";
+import DashboardCoachingCard from "../assets/components/DashboardCoachingCard";
 
 function Home() {
   return (
@@ -18,6 +20,10 @@ function Home() {
           <DashboardCard title="Diet card 3" content="This is diet card 3 info" />
         </div>
       </main>
+      <section className="additional-content">
+        <DashboardCircularGraphCard />
+        <DashboardCoachingCard />
+      </section>
       
  
     </div>

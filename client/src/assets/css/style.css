@@ -547,6 +547,106 @@ body {
   transform: translateY(-5px);
 }
 
+.circular-graph-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: auto;
+}
+.circular-graph-card .circular-graph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circular-graph-card .circular-graph .circle,
+.circular-graph-card .circular-graph .circle-fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid #ddd;
+  z-index: 1;
+}
+.circular-graph-card .circular-graph .circle {
+  border-color: #ddd;
+  z-index: 1;
+}
+.circular-graph-card .circular-graph .circle-fill {
+  border-color: #24ff3a;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%, 50% 50%);
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+.circular-graph-card .circular-graph .circle-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.2em;
+  z-index: 3;
+}
+.circular-graph-card .circular-graph .circle-content .percentage {
+  font-size: 2em;
+  font-weight: bold;
+}
+.circular-graph-card .circular-graph .circle-content .label {
+  font-size: 1em;
+  color: #777;
+}
+
+.coaching-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 2em 0;
+}
+.coaching-card .coaching-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.coaching-card .coaching-content {
+  padding: 1em;
+  text-align: center;
+}
+.coaching-card .coaching-content h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.coaching-card .coaching-content p {
+  margin: 1em 0;
+  color: #555;
+}
+
+.home-page {
+  background-color: #232323;
+}
 .home-page .home-header {
   background-color: rgb(40, 40, 40);
   color: #fff;
@@ -574,6 +674,55 @@ body {
 }
 .home-page .home-main .diet-cards .dashboard-card {
   width: 100%;
+}
+.home-page .additional-content {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
+}
+.home-page .additional-content .circular-graph-card {
+  width: 300px;
+  height: 300px;
+}
+.home-page .additional-content .coaching-info {
+  width: 100%;
+  max-width: 600px;
+}
+@media (max-width: 768px) {
+  .home-page .home-header {
+    flex-direction: column;
+  }
+  .home-page .diet-cards {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .home-page .additional-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .home-page .home-header {
+    padding: 1em;
+  }
+  .home-page .home-header h1 {
+    font-size: 2em;
+  }
+  .home-page .home-main {
+    padding: 1em;
+  }
+  .home-page .diet-cards .dashboard-card {
+    min-width: 100%;
+  }
+  .home-page .additional-content .circular-graph-card {
+    width: 250px;
+    height: 250px;
+  }
+  .home-page .additional-content .coaching-info {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
