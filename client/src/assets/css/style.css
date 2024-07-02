@@ -91,12 +91,7 @@ nav ul li a {
   text-decoration: none;
   transition: color 0.3s;
 }
-
-
-.nav-content li a:hover {
-
 nav ul li a:hover {
-
   color: #fcff34;
 }
 nav .checkbtn {
@@ -194,15 +189,6 @@ nav #check {
   display: block;
 }
 
-
-/* style.css */
-.bgcontainer {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
 @keyframes slideBackground {
   0% {
     background-color: 0 0;
@@ -211,8 +197,13 @@ nav #check {
     background-position: 200% 0;
   }
 }
-* {
-
+/* style.css */
+.bgcontainer {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   background: #a0dbb2;
 }
@@ -316,6 +307,7 @@ nav #check {
   color: #888;
   margin: 20px 0;
 }
+
 .footer {
   background-color: #282c34;
   color: #fff;
