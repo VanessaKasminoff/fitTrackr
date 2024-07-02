@@ -1,20 +1,19 @@
 import React from 'react';
 <link rel="stylesheet" href="./style.css" />
 
-import chartImage from '../img/kickboxing.jpg';
-import appleWatchImage from '../img/appleWatch.png';
-import graphImage from '../img/graph.png';
-import gifPhone from '../img/fitTrackr.gif';
+import appleWatchImage from '../img/appleWatchTransparent.png';
+import graphImage from '../img/graphTransparent.png';
+import workoutBoy from '../img/workoutBoy.gif';
 
 const cardData = [
-    { title: 'card 1', content: 'Content for card 1', imageUrl: gifPhone },
-    { title: 'card 2', content: 'Content for card 2', imageUrl: appleWatchImage },
-    { title: 'card 3', content: 'Content for card 3', imageUrl: graphImage }
+    { title: 'fitness insights at your fingertips!', content: 'Empower yourself with in-depth analytics and actionable feedback. From calorie counting to heart rate monitoring, our app supports your quest for a healthier lifestyle.', imageUrl: appleWatchImage },
+    { title: 'Reach New Heights with Every Workout!', content: "Elevate your fitness game with our app's advanced analytics and goal-setting features. Whether you run, cycle, or lift, track performance and celebrate milestones effortlessly.", imageUrl: graphImage },
+    {title: 'Your Path to Peak Performance Starts Here!', content: "Achieve optimal fitness with our app's personalized plans and real-time coaching. Stay accountable, stay motivated, and see results like never before.", imageUrl: workoutBoy }
 ];
 
-const Card = ({ title, content, imageUrl }) => (
-    <div className="card">
-        <div className='card-text'>
+const Card = ({ title, content, imageUrl, index }) => (
+    <div className={`card card-${index}`}>
+        <div className="card-text" >
             <h2 className='card-title'>{title}</h2>
             <p className='card-content'>{content}</p>
         </div>
@@ -27,7 +26,7 @@ const Card = ({ title, content, imageUrl }) => (
 const CardContainer = () => (
     <div id="cardContainer">
         {cardData.map((item, index) => (
-            <Card key={index} title={item.title} content={item.content} imageUrl={item.imageUrl} />
+            <Card key={index} index={index} title={item.title} content={item.content} imageUrl={item.imageUrl} />
         ))}
     </div>
 );
