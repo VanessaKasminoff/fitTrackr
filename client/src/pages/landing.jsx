@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardContainer from '../assets/components/landingCard'; 
+import Footer from '../assets/components/footer';
 
 function Landing() {
   return (
@@ -15,12 +16,12 @@ function Landing() {
           <label className="logo-box">
             <img src="src/assets/img/logo.png" alt="logo" className="logo" />
           </label>
-          <ul>
+          <ul className='nav-content'>
             <li><a className="active" href="#"></a></li>
-            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href='/NewUser'>Sign Up</a></li>
+            <li><a href="/LogIn">Login</a></li>
           </ul>
         </nav>
         {/* Hero Content */}
@@ -32,14 +33,12 @@ function Landing() {
         </div>
       </header>
       <main className="main-content">
-        <section className="">
-          
-        </section>
         <CardContainer />
         {/* Add your other sections here */}
       </main>
+      <Footer />
     </div>
   );
-};
+}
 
 export default Landing;

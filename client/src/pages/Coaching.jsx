@@ -1,5 +1,8 @@
+import React from "react";
+
 function Coaching() {
-  return <div>Coaching Prices</div>;
+  return <div>Fitness</div>;
+
 }
 
 export default Coaching;
