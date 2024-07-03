@@ -1,7 +1,9 @@
 .home-page {
-    background-color: #232323;
+    background-color: #028091;
+    // background-color: #232323;
     .home-header {
-        background-color: rgb(40, 40, 40);
+        background-color: #20a0b1;
+        // background-color: rgb(40, 40, 40);
         color: #fff;
         padding: 2em;
         text-align: center;
@@ -41,8 +43,18 @@
         gap: 2em;
 
         .circular-graph-card {
-            width: 300px;
+            width: 600px;
             height: 300px;
+        }
+
+        .dashBoy-img {
+            width: 500px;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
 
         .coaching-info {
