@@ -1,5 +1,6 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import Footer from "../assets/components/footer";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -148,6 +149,7 @@ const SignUp = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

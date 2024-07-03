@@ -4,6 +4,7 @@ import DashboardCard from "../assets/components/DashboardCard";
 import '../assets/scss/_dashboardCard.scss';
 import DashboardCircularGraphCard from "../assets/components/DashboardCircularGraphCard";
 import DashboardCoachingCard from "../assets/components/DashboardCoachingCard";
+import Footer from "../assets/components/footer";
 import dashBoy from "../assets/img/stayactive.png";
 import { CurrentUser } from '../contexts/CurrentUser';
 
@@ -42,8 +43,7 @@ function Home() {
         <img className="dashBoy-img" src={dashBoy} />
         <DashboardCoachingCard />
       </section>
-      
- 
+      <Footer />
     </div>
   );
 }

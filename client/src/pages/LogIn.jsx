@@ -1,6 +1,7 @@
-import { React, useContext, useState } from "react";
-import { CurrentUser } from "../contexts/CurrentUser";
-import { useNavigate } from "react-router-dom";
+import { React, useContext, useState } from 'react';
+import { CurrentUser } from '../contexts/CurrentUser';
+import {useNavigate, Link} from 'react-router-dom'
+import Footer from '../assets/components/footer';
 
 function LogIn() {
   const navigate = useNavigate();
@@ -86,6 +87,7 @@ function LogIn() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

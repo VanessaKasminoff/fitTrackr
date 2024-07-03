@@ -19,7 +19,7 @@ function Landing() {
           <ul className='nav-content'>
             <li><a className="active" href="#"></a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li><a href='/NewUser'>Sign Up</a></li>
             <li><a href="/LogIn">Login</a></li>
           </ul>
