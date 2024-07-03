@@ -1,6 +1,7 @@
 import { React, useContext, useState } from 'react';
 import { CurrentUser } from '../contexts/CurrentUser';
 import {useNavigate, Link} from 'react-router-dom'
+import Footer from '../assets/components/footer';
 
 function LogIn() {
 
@@ -61,6 +62,7 @@ function LogIn() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 
