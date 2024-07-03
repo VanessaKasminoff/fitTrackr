@@ -3,6 +3,7 @@ import DashboardCard from "../assets/components/DashboardCard";
 import '../assets/scss/_dashboardCard.scss';
 import DashboardCircularGraphCard from "../assets/components/DashboardCircularGraphCard";
 import DashboardCoachingCard from "../assets/components/DashboardCoachingCard";
+import Footer from "../assets/components/footer";
 
 function Home() {
   return (
@@ -24,8 +25,7 @@ function Home() {
         <DashboardCircularGraphCard />
         <DashboardCoachingCard />
       </section>
-      
- 
+      <Footer />
     </div>
   );
 }
