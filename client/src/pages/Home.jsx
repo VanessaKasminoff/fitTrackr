@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import {React, useContext} from 'react'
 import DashboardCard from "../assets/components/DashboardCard";
 import '../assets/scss/_dashboardCard.scss';
 import DashboardCircularGraphCard from "../assets/components/DashboardCircularGraphCard";
 import DashboardCoachingCard from "../assets/components/DashboardCoachingCard";
+import dashBoy from "../assets/img/stayactive.png";
+import { CurrentUser } from '../contexts/CurrentUser';
 
-function Home() {
+function Home() { const { currentUser } = useContext(CurrentUser)
   return (
     <div className="home-page">
       <header className="home-header">
@@ -12,7 +15,7 @@ function Home() {
       </header>
       <main className="home-main">
         <div className="main-card">
-          <DashboardCard title="Main Card" content="This is the main card info" />
+          <DashboardCard title="Main Card" content={`Hello ${currentUser.firstName}`} />
         </div>
         <div className="diet-cards">
           <DashboardCard title="Diet card 1" content="This is diet card 1 info" />
@@ -22,6 +25,7 @@ function Home() {
       </main>
       <section className="additional-content">
         <DashboardCircularGraphCard />
+        <img className="dashBoy-img" src={dashBoy} />
         <DashboardCoachingCard />
       </section>
       

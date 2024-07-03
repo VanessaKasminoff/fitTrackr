@@ -474,6 +474,7 @@ nav #check {
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 200px;
+  height: 200px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
@@ -518,7 +519,7 @@ nav #check {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 600px;
-  margin: 2em 0;
+  margin: auto;
 }
 .coaching-card .coaching-card-image {
   width: 100%;
@@ -540,10 +541,10 @@ nav #check {
 }
 
 .home-page {
-  background-color: #232323;
+  background-color: #028091;
 }
 .home-page .home-header {
-  background-color: rgb(40, 40, 40);
+  background-color: #20a0b1;
   color: #fff;
   padding: 2em;
   text-align: center;
@@ -574,10 +575,20 @@ nav #check {
   display: flex;
   align-items: center;
   padding: 2em;
+  gap: 2em;
 }
 .home-page .additional-content .circular-graph-card {
   width: 600px;
   height: 300px;
+}
+.home-page .additional-content .dashBoy-img {
+  width: 500px;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 .home-page .additional-content .coaching-info {
   width: 100%;
