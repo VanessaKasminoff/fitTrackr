@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 // app.use(express.static('dist'));
 // app.use(express.static(path.join('dist')));
 app.use(defineCurrentUser);
@@ -47,7 +47,7 @@ app.use('/api/authentication', require('./controllers/authentication'));
 
 // SERVES CLIENT SIDE REACT ROUTING
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 // app.get('*', (req, res) => {
 //     res.sendFile('dist/index.html', {root: __dirname})
