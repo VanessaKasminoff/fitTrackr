@@ -28,7 +28,7 @@ app.use('/api/authentication', require('./controllers/authentication'));
 
 // SERVES CLIENT SIDE REACT ROUTING
 app.get('*', (req, res) => {
-    res.sendFile('dist/index.html', {root: _dirname})
+    res.sendFile('dist/index.html', {root: __dirname})
 });
 
 app.listen(PORT, () => {

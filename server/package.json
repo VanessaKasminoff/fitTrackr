@@ -3,7 +3,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "db:migrate": "npx sequelize-cli db:migrate"
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed --seed 20240629053135-demo-exercises.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

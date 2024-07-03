@@ -28,14 +28,14 @@ const SignUp = () => {
       },
       body: JSON.stringify(user),
     });
-    navigate("/NewUser");
+    navigate("/");
   }
 
   return (
     <div className="bgcontainer">
       <div className="container">
         <div className="form-container sign-up">
-          <form>
+          <form onSubmit={handleSubmit}>
             <h1>Create Account</h1>
             <div className="social-icons">
               <a href="#" className="icon">
@@ -49,10 +49,42 @@ const SignUp = () => {
               </a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="text"
+              placeholder="First Name"
+              value={user.firstName}
+              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+              id="firstName"
+              name="firstName"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              value={user.lastName}
+              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+              id="lastName"
+              name="lastName"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+              id="email"
+              name="email"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={user.password}
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
+              id="password"
+              name="password"
+              required
+            />
             <div className="dropdown">
               <label
                 htmlFor="dropdown"
@@ -67,12 +99,22 @@ const SignUp = () => {
                 id="dropdown"
                 checked={isDropdownOpen}
                 onChange={toggleDropdown}
+                required
               />
               {isDropdownOpen && (
                 <ul className="dropdown-content">
                   <li>
                     <label htmlFor="male">Male</label>
-                    <input type="radio" name="gender" id="male" value="male" />
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                      checked={user.gender === "male"}
+                      onChange={(e) =>
+                        setUser({ ...user, gender: e.target.value })
+                      }
+                    />
                   </li>
                   <li>
                     <label htmlFor="female">Female</label>
@@ -81,6 +123,10 @@ const SignUp = () => {
                       name="gender"
                       id="female"
                       value="female"
+                      checked={user.gender === "female"}
+                      onChange={(e) =>
+                        setUser({ ...user, gender: e.target.value })
+                      }
                     />
                   </li>
                   <li>
@@ -90,20 +136,21 @@ const SignUp = () => {
                       name="gender"
                       id="non-binary"
                       value="non-binary"
+                      checked={user.gender === "non-binary"}
+                      onChange={(e) =>
+                        setUser({ ...user, gender: e.target.value })
+                      }
                     />
                   </li>
                 </ul>
               )}
             </div>
-            <Link to="/Home">
-              <button type="button">Sign Up</button>
-            </Link>
+            <button type="submit">Sign Up</button>
           </form>
         </div>
       </div>
       <Footer />
     </div>
-    
   );
 };
 
