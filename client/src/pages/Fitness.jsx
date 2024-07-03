@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import "../assets/scss/_fitness.scss";
+import { useNavigate } from "react-router-dom";
 
 function Fitness() {
+  const navigate = useNavigate();
+
   const [workouts, setWorkouts] = useState([]);
   const [selectedWorkouts, setSelectedWorkouts] = useState([]);
   const [newWorkout, setNewWorkout] = useState({
@@ -11,6 +14,7 @@ function Fitness() {
     reps: "",
     time_limit: "",
   });
+  const [modifiedWorkout, setModifiedWorkout] = useState(false);
 
   useEffect(() => {
     const fetchExercises = async () => {
@@ -21,7 +25,33 @@ function Fitness() {
     };
 
     fetchExercises();
-  }, []);
+    setModifiedWorkout(false)
+  }, [modifiedWorkout]);
+
+  async function handleSubmit (e) {
+    e.preventDefault()
+    await fetch('/api/exercises', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newWorkout),
+    });
+    setModifiedWorkout(true)
+    navigate('/Fitness')
+  }
+
+  async function handleRemove(id, e) {
+    e.preventDefault()
+    await fetch(`/api/exercises/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    setModifiedWorkout(true)
+    navigate('/Fitness')
+  }
 
   const handleAdd = (workout) => {
     if (!selectedWorkouts.find((w) => w.id === workout.id)) {
@@ -39,19 +69,7 @@ function Fitness() {
     <div className="workout">
       <div className="workouts-container">
         <h1>Fitness Workouts</h1>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            handleAdd(newWorkout);
-            setNewWorkout({
-              exercise_name: "",
-              description: "",
-              difficulty_level: "",
-              reps: "",
-              time_limit: "",
-            }); // Reset form after submission
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Exercise Name"
@@ -94,10 +112,10 @@ function Fitness() {
           />
           <button type="submit">Add New Workout</button>
         </form>
-        {workouts.map((workout) => (
+        {workouts.map((workout, index) => (
           <div
             className="workout-item"
-            key={workout.id}
+            key={index}
             // style={{
             //   padding: "20px",
             //   border: "1px solid #ccc",
@@ -123,13 +141,14 @@ function Fitness() {
             >
               Add
             </button>
+            <button type="submit" onClick={(e) => handleRemove(workout.id, e)}>Delete</button>
           </div>
         ))}
         <div className="selected-workouts">
           <h2>Selected Workouts</h2>
           {selectedWorkouts.length > 0 ? (
-            selectedWorkouts.map((workout) => (
-              <div key={workout} className="selected-workout-item">
+            selectedWorkouts.map((workout, index) => (
+              <div key={index} className="selected-workout-item">
                 <h3>{workout.exercise_name}</h3>
                 <button onClick={() => handleDelete(workout.id)}>Remove</button>
               </div>
