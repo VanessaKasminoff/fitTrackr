@@ -27,7 +27,7 @@ const SignUp = () => {
       },
       body: JSON.stringify(user),
     });
-    navigate("/Home");
+    navigate("/");
   }
 
   return (
