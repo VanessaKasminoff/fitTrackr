@@ -20,5 +20,45 @@
             text-decoration: underline;
         }
     }
+
+    section {
+        background: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ece338;
+        }
+
+        .guide, .meal-plan, .recipe, .faq {
+            margin-bottom: 20px;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .mealprep-tools {
+        padding: 20px;
+        background: #fff3e0;
+        text-align: center;
+
+    }
+
+    .mealprep-faqs {
+        background: #333;
+        .faq {
+            color: #fff;
+        }
+    }
 }
 

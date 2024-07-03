@@ -691,5 +691,37 @@ nav #check {
   font-size: 1.2rem;
   text-decoration: underline;
 }
+.mealprep-page section {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.mealprep-page section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ece338;
+}
+.mealprep-page section .guide, .mealprep-page section .meal-plan, .mealprep-page section .recipe, .mealprep-page section .faq {
+  margin-bottom: 20px;
+}
+.mealprep-page section .guide h3, .mealprep-page section .meal-plan h3, .mealprep-page section .recipe h3, .mealprep-page section .faq h3 {
+  font-size: 1.5rem;
+}
+.mealprep-page section .guide p, .mealprep-page section .meal-plan p, .mealprep-page section .recipe p, .mealprep-page section .faq p {
+  font-size: 1rem;
+}
+.mealprep-page .mealprep-tools {
+  padding: 20px;
+  background: #fff3e0;
+  text-align: center;
+}
+.mealprep-page .mealprep-faqs {
+  background: #333;
+}
+.mealprep-page .mealprep-faqs .faq {
+  color: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */
