@@ -21,4 +21,37 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post('/', async (req,res) => {
+  const newWorkout = await workout.create(req.body)
+  res.json(newWorkout)
+  console.log(newWorkout)
+})
+
+router.get('/:id', async (req, res) => {
+  let workoutId = Number(req.params.id)
+  try {
+    const findWorkout = await workout.findOne({
+      where: {id: workoutId}
+    })
+    res.json(findWorkout)
+  } catch (error) {
+    console.error('Could not find workout with id', error)
+  }
+})
+
+router.delete('/:id', async (req, res) => {
+  let workoutId = Number(req.params.id)
+
+  const findWorkout = await workout.findOne({
+    where: {id: workoutId}
+  });
+
+  if (!findWorkout) {
+    res.status(404).json({message: `Could not find workout with id ${workoutId}`})
+  } else {
+    await findWorkout.destroy()
+    res.json(findWorkout)
+  }
+})
+
 module.exports = router;
