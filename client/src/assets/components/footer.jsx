@@ -21,7 +21,7 @@ const Footer = () => {
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Coaching</a></li>
                         <li><a href="#">Fitness</a></li>
-                        <li><a href="#">Meal Prep</a></li>
+                        <li><Link to="/mealprep">Meal Prep</Link></li>
                     </ul>
                 </div>
                 <div className="footer-section social">
