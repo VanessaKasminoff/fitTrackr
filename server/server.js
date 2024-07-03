@@ -17,9 +17,9 @@ app.use(defineCurrentUser);
 const exerciseRoutes = require("./Routes/exerciseRoutes");
 
 // ROOT
-app.get("/", (req, res) => {
-  res.json("Welcome to the backend server!");
-});
+// app.get("/", (req, res) => {
+//   res.json("Welcome to the backend server!");
+// });
 
 //CONTROLLERS
 app.use("/api/exercises", exerciseRoutes);
