@@ -6,17 +6,19 @@ import DashboardCircularGraphCard from "../assets/components/DashboardCircularGr
 import DashboardCoachingCard from "../assets/components/DashboardCoachingCard";
 import Footer from "../assets/components/footer";
 import dashBoy from "../assets/img/stayactive.png";
+import mealPrepping from "../assets/img/mealprep-jars.jpg";
+import recipesImg from "../assets/img/recipes.jpg";
+import faqImg from "../assets/img/healthyfood.jpg"
 import { CurrentUser } from '../contexts/CurrentUser';
 
 function Home() { 
   const { currentUser } = useContext(CurrentUser)
-
   let greetingDiv;
-
+  
   if (currentUser) {
     greetingDiv = (
       <div className="main-card">
-        <DashboardCard title="Main Card" content={`Hello ${currentUser.firstName}`} />
+        <DashboardCard title="Find your Fit" content={`Hello ${currentUser.firstName}, what are your goals today?`} />
       </div>
     )
   }
@@ -33,9 +35,9 @@ function Home() {
         </div> */}
         {greetingDiv}
         <div className="diet-cards">
-          <DashboardCard title="Diet card 1" content="This is diet card 1 info" />
-          <DashboardCard title="Diet card 2" content="This is diet card 2 info" />
-          <DashboardCard title="Diet card 3" content="This is diet card 3 info" />
+          <DashboardCard title="Meal Prep" content="Meal prep for success." imageUrl={mealPrepping} />
+          <DashboardCard title="Recipes" content="Discover new recipes." imageUrl={recipesImg}/>
+          <DashboardCard title="FAQ" content="Answer questions you may have." imageUrl={faqImg}/>
         </div>
       </main>
       <section className="additional-content">

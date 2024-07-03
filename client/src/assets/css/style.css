@@ -472,7 +472,7 @@ nav #check {
 }
 
 .dashboard-card {
-  background-color: #fff;
+  background-color: #ffee34;
   padding: 2em;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -481,10 +481,22 @@ nav #check {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  color: #fff;
 }
-.dashboard-card h2 {
+.dashboard-card .card-link {
+  color: #74b2f5;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dashboard-card .card-link:hover {
+  text-decoration: underline;
+}
+.dashboard-card h3 {
   margin-bottom: 1em;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 .dashboard-card p {
   margin: 0;
@@ -515,7 +527,7 @@ nav #check {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 2em;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -541,6 +553,14 @@ nav #check {
 .coaching-card .coaching-content p {
   margin: 1em 0;
   color: #555;
+}
+.coaching-card .fitness-link {
+  color: #ff9d00;
+  text-decoration: none;
+  font-weight: bold;
+}
+.coaching-card .fitness-link:hover {
+  text-decoration: underline;
 }
 
 .home-page {
