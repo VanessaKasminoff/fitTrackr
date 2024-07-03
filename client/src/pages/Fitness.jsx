@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../assets/scss/_fitness.scss";
 import { useNavigate } from "react-router-dom";
+import Footer from "../assets/components/footer";
 
 function Fitness() {
   const navigate = useNavigate();
@@ -158,6 +159,7 @@ function Fitness() {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
