@@ -2,9 +2,10 @@
 .bgcontainer {
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background: #a0dbb2;
   .container {
@@ -101,6 +102,8 @@
   a:hover {
     color:#659c75;
   }
+
+
 }
 
 
