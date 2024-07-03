@@ -4,6 +4,7 @@ import MealPrepPlan from '../assets/components/MealPrepPlan';
 import MealPrepRecipe from '../assets/components/MealPrepRecipe';
 import MealPrepTool from '../assets/components/MealPrepTool';
 import MealPrepFAQ from '../assets/components/MealPrepFAQ';
+import Footer from '../assets/components/footer';
 
 function MealPrep() {
   return (
@@ -17,6 +18,7 @@ function MealPrep() {
       <MealPrepRecipe />
       <MealPrepTool />
       <MealPrepFAQ />
+      <Footer />
     </div>
   )
   
