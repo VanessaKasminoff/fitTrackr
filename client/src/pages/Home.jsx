@@ -41,7 +41,7 @@ function Home() {
         </div>
       </main>
       <section className="additional-content">
-        <DashboardCircularGraphCard />
+        {/* <DashboardCircularGraphCard /> */}
         <img className="dashBoy-img" src={dashBoy} />
         <DashboardCoachingCard />
       </section>

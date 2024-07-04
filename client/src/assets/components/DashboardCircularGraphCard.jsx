@@ -13,7 +13,7 @@ const DashboardCircularGraphCard = () => {
       <div className="circular-graph-card">
         <div className="circular-graph">
           <div className="circle-content">
-            <img src={graphPercentage}  />
+            <img src={graphPercentage} />
           </div>
         </div>
       </div>
